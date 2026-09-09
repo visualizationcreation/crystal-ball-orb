@@ -11,3 +11,7 @@ The guesses do not establish AGI or foreknowledge. Keep misses and unresolved ca
 
 https://visualizationcreation.github.io/crystal-ball-orb/
 https://visualizationcreation.github.io/orb-archive/
+
+## Illustrated edition
+
+Every point has a distinct image. Open [the photo atlas](image-credits.html) for captions, original web sources, creator credits, licenses and illustration prompts. Complete machine-readable provenance is in [point-media.json](point-media.json). The 53 optimized WebP files are local to this site; no image generation service or remote image host is required to browse. Source links require internet access. Keep all files together when opening the downloaded folder offline.

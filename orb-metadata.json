@@ -2,7 +2,7 @@
   "id": "crystal-ball-orb",
   "title": "Crystal Ball ORB",
   "edition": "2026-09-08-edition-04",
-  "description": "Fifteen forecasts across 53 crystal-ball points: sci-fi reveals, robotics, AI cooperation, space, culture and weather. Nine unrecorded learning chapters.",
+  "description": "Fifteen forecasts across 53 illustrated crystal-ball points, with 21 credited web images, 32 local AI illustrations and nine unrecorded learning chapters.",
   "tags": [
     "CrystalBallOrb",
     "forecasting",
@@ -27,5 +27,10 @@
     "id": "crystal-ball-world-watch-v3",
     "stories": 10,
     "narrated": false
-  }
+  },
+  "imageCount": 53,
+  "webImageCount": 21,
+  "generatedImageCount": 32,
+  "mediaRevision": "edition-04-photos-2026-09-08",
+  "imageCredits": "image-credits.html"
 }

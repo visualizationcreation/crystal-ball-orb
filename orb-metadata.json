@@ -1,24 +1,24 @@
 {
   "id": "crystal-ball-orb",
   "title": "Crystal Ball ORB",
-  "edition": "2026-09-08-edition-03",
-  "description": "Ten nonpolitical forecasts across 36 crystal-ball points, ten World Watch readings and a six-chapter ORB Learn reading course.",
+  "edition": "2026-09-08-edition-04",
+  "description": "Fifteen forecasts across 53 crystal-ball points: sci-fi reveals, robotics, AI cooperation, space, culture and weather. Nine unrecorded learning chapters.",
   "tags": [
     "CrystalBallOrb",
     "forecasting",
     "science",
     "culture"
   ],
-  "pointCount": 36,
-  "forecastCount": 10,
+  "pointCount": 53,
+  "forecastCount": 15,
   "narrationReady": false,
   "availableJourneys": [
     {
-      "id": "crystal-ball-learn-v3",
-      "name": "Thinking in Probabilities · Beyond the Headlines",
+      "id": "crystal-ball-learn-v4",
+      "name": "Thinking in Probabilities · Signals of Tomorrow",
       "mode": "ORB Learn",
       "narrationReady": false,
-      "status": "Reading course",
+      "status": "Unrecorded reading course",
       "url": "#learn"
     }
   ],

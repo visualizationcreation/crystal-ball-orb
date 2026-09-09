@@ -1,5 +1,15 @@
-# Edition 03 · scope revision
+# Edition 04 · Signals of Tomorrow
 
-At the owner’s request, nine election, political-event and policy-decision forecasts and their dependent readings were removed from the active orb. Five replacement calls cover ISS cargo, a crew launch, comedy awards, tennis match length and Atlantic cyclone formation. Five existing nonpolitical calls retain their IDs, probabilities and rules.
+Added five dated forecasts and two themes, taking the orb from 36 to 53 points and
+from ten to fifteen predictions. New branches cover StarCraft, demonstration-based
+robot teaching, a build-to-flight drone demonstration, cooperating software agents
+and Project ZIRCON gameplay. Each has two supporting detail/question points.
 
-This change occurred before scoring, not because of wins or misses. Earlier content and recordings remain in the author’s local historical package; ordinary Git history retains earlier public revisions. This edition does not relabel the old recording as new narration. Current downloads contain only the revised active set.
+The ten retained forecast readings, probabilities, tests and cutoffs are unchanged.
+Earlier political branches remain retired. The new estimates are subjective; four
+test delivery of announced demonstrations and one tests a speculative product reveal.
+
+The reading course now has nine connected chapters and remains unrecorded. At the
+owner’s request, old recordings are removed from current project files and the live
+site. Ordinary Git history may retain earlier audio; history is not rewritten.
+Earlier text snapshots remain available for an honest forecasting record.

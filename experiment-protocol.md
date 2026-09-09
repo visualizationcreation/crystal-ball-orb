@@ -1,15 +1,32 @@
-# Crystal Ball ORB · Edition 03
+# Crystal Ball ORB · Edition 04
 
-Research cutoff for five replacement calls: 2026-09-09T03:01:18+00:00. Window: September 9–22, 2026. Five retained nonpolitical calls keep their original probability, rule and point cutoff. This is a change of subject scope at the owner’s request, before outcomes, not a performance-based selection.
+Window: September 9–22, 2026. New five-call cutoff: 2026-09-09T03:21:01+00:00.
+Ten retained calls preserve their probabilities, rules, prose and original cutoffs.
+The active record contains fifteen unresolved calls. No result has been entered.
 
-The active set has ten forecasts about technology, awards, sport, spaceflight, prices and weather. Election results, diplomatic meetings, trade agreements, central-bank decisions and speech-content scoring have been retired from the active edition. Earlier local snapshots and the matching original recording/transcript were preserved; they are not republished as this edition’s downloads or course.
+The new calls cover a speculative StarCraft reveal and delivery of announced robotics,
+manufacturing, AI-agent and gameplay demonstrations. Those are different forecasting
+classes. Calendar fulfillment is generally easier than predicting an unannounced
+breakthrough. We do not score whether an event becomes a popular headline.
 
-The current record is forecast-edition-03.json. Its hash proves file identity, not publication time; use public commit history for that. Exclude any claim whose outcome was already public at its first publication from prospective scoring. No result has been entered at publication.
+Use each explicit rule, including its evidence requirements and deadline. Some calls
+test publication of a documented demonstration, not a hidden event. A complete review
+with no qualifying public evidence can resolve those calls NO; inadequate access leaves
+them unresolved. Record source, timestamp, interventions and whether a demo was live.
+Do not move a scoring target after seeing the outcome.
 
-Apply each claim’s explicit rule. Record YES, NO, provisional or unresolved, a dated source, and the reason. The docking and no-launch calls are by-deadline tests: delay has the consequence specified in each rule. Do not silently excuse a miss. The weather call tests operational advisories, not later reanalysis. Retirements leave the tennis call unresolved.
+The current snapshot is forecast-edition-04.json. Its hash establishes file identity,
+not independent publication time. Use public commit history for the latter. Exclude
+any claim whose outcome was already public before its first publication from prospective
+scoring. Keep earlier editions as dated text records; the owner authorized deleting old audio.
 
-Brier loss is (p − y)² for resolved binary calls. Report the resolved denominator out of ten and every unresolved case. Also separate the five retained calls from the five new calls; earlier editions are not directly comparable after this scope change. A fixed 50% baseline scores 0.25, but selected easy calendar calls can beat that without special forecasting skill. Use matched base rates in future rounds.
+For resolved binary calls use Brier loss (p-y)^2, reporting the resolved denominator out
+of fifteen and every unresolved case. Report the five newest calls separately from the
+ten retained calls, and retain older batch distinctions. Correlated demos from the same
+event and selected easy calendar tests limit interpretation. Compare against appropriate
+base rates; a fixed 50% forecast has loss 0.25 but is not necessarily a fair benchmark.
 
-The probabilities are subjective. No calibration study, controlled AGI experiment, blinded trial or reliable short-range foreknowledge has been demonstrated. Two awards calls share evidence; two spaceflight calls share scheduling context. Keep those dependencies visible. The World Watch companion has no scored predictions.
-
-The new ORB Learn reading course is unrecorded. The earlier 19:24 male recording and matching transcript remain intact in the local historical package and are not represented as narration for the new edition.
+This is a playful educational experiment inspired by AGI claims. It does not demonstrate
+AGI, calibration or foreknowledge. The site has no automatic news or warning feed.
+World Watch’s ten unscored stories retain their stated earlier snapshot dates. Current
+official guidance takes precedence for safety decisions. The nine-chapter course is unrecorded.

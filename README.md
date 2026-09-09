@@ -1,20 +1,17 @@
-# Crystal Ball ORB
+# Crystal Ball ORB · Edition 03
 
-A playful, testable AI-assisted forecasting experiment for September 9–22, 2026.
+Ten forecasts about technology, culture, sport, spaceflight, prices and weather,
+with six themes and twenty supporting evidence/question points in one orb.
+Ten unscored World Watch companions and a six-chapter ORB Learn reading course
+complete the edition. The new course is unrecorded; prior audio is an earlier edition.
 
-One sphere, three layers: themes above, eight predicted outcomes in the middle,
-and evidence and uncertainty below. Original forecasts are preserved in orb.json.
+Open index.html. GitHub Pages uses the main branch root. All current readings and
+map data are embedded; external source links require internet access.
 
-Thinking in Probabilities is a 19:24 ORB Learn course with ten chapters, original
-teaching diagrams and saved male AI narration by Kokoro Michael. World Watch adds
-21 separately dated, sourced reading companions; it is not part of the recording.
+See revision-notes.md for the owner-requested change of scope and
+experiment-protocol.md for scoring. A small selected set of subjective guesses
+does not demonstrate AGI, calibration or foreknowledge. Keep misses and unresolved
+cases. Earlier local recordings and their matching transcripts remain intact.
 
-Open index.html with its assets directory intact. GitHub Pages serves this site
-from the main branch root. Source links need internet access.
-
-See experiment-protocol.md and scorecard.csv for scoring. The eight selected,
-partly correlated forecasts do not establish AGI, calibration or foreknowledge.
-The snapshot hash identifies orb.json; the public commit history records its
-publication time. No subsequent outcomes have been entered as forecast wins.
-
-More ORB journeys: https://visualizationcreation.github.io/orb-archive/
+https://visualizationcreation.github.io/crystal-ball-orb/
+https://visualizationcreation.github.io/orb-archive/

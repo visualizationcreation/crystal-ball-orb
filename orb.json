@@ -1,0 +1,904 @@
+{
+  "id": "crystal-ball-orb",
+  "title": "Crystal Ball ORB",
+  "theme": "#CrystalBallOrb",
+  "edition": "2026-09-08-v1",
+  "forecastAsOf": "2026-09-08 America/Los_Angeles",
+  "window": {
+    "start": "2026-09-09",
+    "end": "2026-09-22"
+  },
+  "method": "Subjective author probabilities in five-point steps; not calibrated model outputs or market odds. Confirmed calendars and cited observations are separate from predicted outcomes. This edition is a static snapshot and does not automatically fetch results. Correlated forecasts should not be treated as independent.",
+  "points": [
+    {
+      "id": "inflation",
+      "label": "Price pressure",
+      "title": "The energy shock meets the policy calendar",
+      "layer": "theme",
+      "body": "Price pressure is the strongest shared driver in this edition. Recent central-bank statements describe an energy shock and uncertainty about its spread into other prices. My inference is that this keeps an increase in rates on the table, even where policymakers previously chose to wait. The same shock can move several forecasts together: these are correlated judgments, not eight independent bets.",
+      "sources": [
+        "ecb-july",
+        "fed-july",
+        "boe-july"
+      ],
+      "children": [
+        "ecb",
+        "cpi",
+        "fed"
+      ],
+      "lon": 0.0,
+      "level": 2,
+      "left": "momentum",
+      "right": "patience",
+      "up": null,
+      "down": "ecb",
+      "edge": {
+        "up": "Top layer: no broader theme has been authored in this edition.",
+        "backward": "Beginning of the dated forecast thread."
+      },
+      "backward": null,
+      "forward": "cpi"
+    },
+    {
+      "id": "patience",
+      "label": "Policy patience",
+      "title": "The value of waiting for one more reading",
+      "layer": "theme",
+      "body": "A decision can change because the evidence changes, or because policymakers become less willing to wait. A previous majority for a hold is a useful starting point, not a promise. This theme supports the British and Japanese hold forecasts while supplying the main counterargument to the US and euro-area hike calls. Follow DOWN to inspect those competing decisions.",
+      "sources": [
+        "boe-july",
+        "boj-july"
+      ],
+      "children": [
+        "boe",
+        "boj"
+      ],
+      "lon": 90.0,
+      "level": 2,
+      "left": "inflation",
+      "right": "coalitions",
+      "up": null,
+      "down": "boe",
+      "edge": {
+        "up": "Top layer: no broader theme has been authored in this edition."
+      },
+      "backward": "fed",
+      "forward": "boj"
+    },
+    {
+      "id": "coalitions",
+      "label": "Shared power",
+      "title": "Large stages, distributed power",
+      "layer": "theme",
+      "body": "Votes and speeches aggregate many interests. In Sweden, a fragmented starting parliament makes an outright single-party majority a demanding prediction. At the UN, a broad agenda can produce common vocabulary without a shared policy. The connection is interpretive: neither an election system nor a diplomatic theme determines the eventual outcome.",
+      "sources": [
+        "sweden-history",
+        "un-calendar"
+      ],
+      "children": [
+        "sweden",
+        "un"
+      ],
+      "lon": 180.0,
+      "level": 2,
+      "left": "patience",
+      "right": "momentum",
+      "up": null,
+      "down": "sweden",
+      "edge": {
+        "up": "Top layer: no broader theme has been authored in this edition."
+      },
+      "backward": "cpi",
+      "forward": "fed"
+    },
+    {
+      "id": "momentum",
+      "label": "Competitive depth",
+      "title": "Past strength meets a new host",
+      "layer": "theme",
+      "body": "China’s long run at the top of the Asian Games medal table provides a strong historical prior. But the opening days are a different question from the final standings: the order of medal events and the host team’s strengths can temporarily reverse the expected hierarchy. This theme makes that transfer from history to a short horizon explicit.",
+      "sources": [
+        "games-history",
+        "games-date"
+      ],
+      "children": [
+        "games"
+      ],
+      "lon": 270.0,
+      "level": 2,
+      "left": "coalitions",
+      "right": "inflation",
+      "up": null,
+      "down": "games",
+      "edge": {
+        "up": "Top layer: no broader theme has been authored in this edition."
+      },
+      "backward": "boj",
+      "forward": "un"
+    },
+    {
+      "id": "ecb",
+      "label": "ECB +¼ point",
+      "title": "The ECB raises its deposit rate by 0.25 points",
+      "layer": "prediction",
+      "date": "2026-09-10",
+      "event": "European Central Bank decision",
+      "probability": 55,
+      "parent": "inflation",
+      "body": "My narrow preference is a quarter-point increase in the deposit facility rate. Euro-area headline inflation accelerated in the August flash estimate, giving the ECB a reason to act after July’s pause. Energy can also squeeze demand, so this is a close call rather than a claim that a hike is inevitable. The probability is my judgment, without a live market-odds feed.",
+      "test": "YES if the September 10 decision increases the deposit facility rate by exactly 0.25 percentage points relative to the rate immediately before that decision. Any other change or a hold is NO.",
+      "alternative": "A hold: policymakers look through energy and wait for clearer evidence of persistent inflation.",
+      "watch": "The September decision, revised inflation assessment, and the language about second-round effects.",
+      "sources": [
+        "ecb-calendar",
+        "ecb-july",
+        "euro-inflation"
+      ],
+      "children": [
+        "ecb-evidence",
+        "ecb-question"
+      ],
+      "status": "Unresolved at forecast cutoff",
+      "lon": 0.0,
+      "level": 1,
+      "left": "un",
+      "right": "cpi",
+      "up": "inflation",
+      "down": "ecb-evidence",
+      "edge": {
+        "backward": "Beginning of the dated forecast thread."
+      },
+      "backward": null,
+      "forward": "cpi"
+    },
+    {
+      "id": "ecb-evidence",
+      "label": "Euro inflation",
+      "title": "A sharper headline inflation reading",
+      "layer": "detail",
+      "kind": "evidence",
+      "parent": "ecb",
+      "body": "Eurostat’s September 1 flash estimate puts annual euro-area inflation at 3.3% in August, after 2.9% in July. That is a new input since the ECB’s July hold. A flash estimate can be revised; headline acceleration does not by itself establish a wage-price spiral.",
+      "question": "How much of the increase is persistent rather than an energy-level effect?",
+      "method": "Compare components and subsequent revisions; do not infer persistence from the headline alone.",
+      "sources": [
+        "euro-inflation"
+      ],
+      "lon": 0.0,
+      "level": 0,
+      "left": "un-question",
+      "right": "ecb-question",
+      "up": "ecb",
+      "down": "ecb-question",
+      "edge": {
+        "backward": "Beginning of the dated forecast thread."
+      },
+      "backward": null,
+      "forward": "cpi"
+    },
+    {
+      "id": "ecb-question",
+      "label": "Energy pass-through?",
+      "title": "Knowledge floor · How far does energy spread?",
+      "layer": "detail",
+      "kind": "floor",
+      "parent": "ecb",
+      "body": "The ECB’s July statement explicitly tracked indirect and second-round effects. This orb has no independent estimate of their size. That is an evidence gap in this forecast, not a claim that the mechanism is unknowable.",
+      "question": "Will policymakers see enough persistence to prefer a hike to waiting?",
+      "method": "Read the decision and press conference against the prior statement, then separate the stated rationale from this author’s inference.",
+      "sources": [
+        "ecb-july"
+      ],
+      "lon": 22.5,
+      "level": 0,
+      "left": "ecb-evidence",
+      "right": "cpi-evidence",
+      "up": "ecb-evidence",
+      "down": null,
+      "edge": {
+        "down": "Evidence boundary: use the open question and continuation prompt to develop this branch.",
+        "backward": "Beginning of the dated forecast thread."
+      },
+      "backward": null,
+      "forward": "cpi"
+    },
+    {
+      "id": "cpi",
+      "label": "Core CPI 0.2–0.3%",
+      "title": "US core CPI rises 0.2% or 0.3% in August",
+      "layer": "prediction",
+      "date": "2026-09-11",
+      "event": "US consumer price release",
+      "probability": 60,
+      "parent": "inflation",
+      "body": "My guess is a seasonally adjusted monthly core CPI increase reported as 0.2% or 0.3%. July’s 0.2% reading gives a modest starting point, while an energy shock leaves room for indirect pressure. This is a simple persistence judgment, not an econometric nowcast. Core CPI excludes food and energy directly; it is not the Fed’s preferred PCE measure.",
+      "test": "YES if the initial September 11 BLS release reports August CPI-U, all items less food and energy, at 0.2% or 0.3% month over month, seasonally adjusted. Use the published rounded figure, not later revisions.",
+      "alternative": "A softer 0.0–0.1% reading, or an upside surprise of 0.4% or more.",
+      "watch": "The core monthly line in the initial release and the shelter and goods components.",
+      "sources": [
+        "cpi-calendar",
+        "cpi-july"
+      ],
+      "children": [
+        "cpi-evidence",
+        "cpi-question"
+      ],
+      "status": "Unresolved at forecast cutoff",
+      "lon": 45.0,
+      "level": 1,
+      "left": "ecb",
+      "right": "sweden",
+      "up": "inflation",
+      "down": "cpi-evidence",
+      "edge": {},
+      "backward": "ecb",
+      "forward": "sweden"
+    },
+    {
+      "id": "cpi-evidence",
+      "label": "July core +0.2%",
+      "title": "The previous monthly core reading",
+      "layer": "detail",
+      "kind": "evidence",
+      "parent": "cpi",
+      "body": "The July release reported core CPI up 0.2% month over month, seasonally adjusted. A single month is a weak trend estimate. I use it as an anchor for the next report, with a wider 0.2–0.3% success range rather than pretending to know the next decimal.",
+      "question": "How stable is the July pace across major components?",
+      "method": "Inspect the archived release and compare the next release’s component contributions.",
+      "sources": [
+        "cpi-july"
+      ],
+      "lon": 45.0,
+      "level": 0,
+      "left": "ecb-question",
+      "right": "cpi-question",
+      "up": "cpi",
+      "down": "cpi-question",
+      "edge": {},
+      "backward": "ecb",
+      "forward": "sweden"
+    },
+    {
+      "id": "cpi-question",
+      "label": "Component surprise?",
+      "title": "Knowledge floor · Where could the surprise hide?",
+      "layer": "detail",
+      "kind": "floor",
+      "parent": "cpi",
+      "body": "This edition does not contain a bottom-up rent, vehicle, airfare, and medical-price nowcast. That missing work limits the confidence of the numerical call. Energy pressures can transmit into core categories indirectly and with lags.",
+      "question": "Which component could move the rounded core rate outside the forecast range?",
+      "method": "Build a contribution table from official category weights and monthly movements after release; retain the original forecast.",
+      "sources": [
+        "cpi-july",
+        "cpi-calendar"
+      ],
+      "lon": 67.5,
+      "level": 0,
+      "left": "cpi-evidence",
+      "right": "sweden-evidence",
+      "up": "cpi-evidence",
+      "down": null,
+      "edge": {
+        "down": "Evidence boundary: use the open question and continuation prompt to develop this branch."
+      },
+      "backward": "ecb",
+      "forward": "sweden"
+    },
+    {
+      "id": "sweden",
+      "label": "No solo majority",
+      "title": "No Swedish party wins an outright majority",
+      "layer": "prediction",
+      "date": "2026-09-13",
+      "event": "Swedish parliamentary election",
+      "probability": 95,
+      "parent": "coalitions",
+      "body": "I expect no single party to win 175 of the 349 Riksdag seats. This is a structural forecast, not a winner or coalition forecast: the official 2022 results show the largest party with 107 seats. Moving from that starting point to a solo majority would require a very large shift. This edition does not include a verified September polling model.",
+      "test": "YES if every party has fewer than 175 seats in the official 2026 allocation. Use a final result available by September 22, 23:59 Stockholm time; if only preliminary figures exist, label the assessment provisional and leave final scoring pending.",
+      "alternative": "One party reaches at least 175 seats. A multiparty bloc majority does not falsify this forecast.",
+      "watch": "Official seat allocations, especially the distinction between a party, a bloc, and an eventual government.",
+      "sources": [
+        "sweden-date",
+        "sweden-history",
+        "sweden-results"
+      ],
+      "children": [
+        "sweden-evidence",
+        "sweden-question"
+      ],
+      "status": "Unresolved at forecast cutoff",
+      "lon": 90.0,
+      "level": 1,
+      "left": "cpi",
+      "right": "fed",
+      "up": "coalitions",
+      "down": "sweden-evidence",
+      "edge": {},
+      "backward": "cpi",
+      "forward": "fed"
+    },
+    {
+      "id": "sweden-evidence",
+      "label": "107 of 349",
+      "title": "The scale of the previous largest party",
+      "layer": "detail",
+      "kind": "evidence",
+      "parent": "sweden",
+      "body": "The Social Democrats won 107 seats in 2022, according to the Swedish Election Authority. This historical result supports a fragmented-parliament starting assumption; it does not tell us the 2026 winner. No vote intention is inferred for any individual.",
+      "question": "Would a current seat projection materially weaken the no-majority prior?",
+      "method": "Add a dated, methodologically documented national polling aggregate before making a party-winner forecast.",
+      "sources": [
+        "sweden-history"
+      ],
+      "lon": 90.0,
+      "level": 0,
+      "left": "cpi-question",
+      "right": "sweden-question",
+      "up": "sweden",
+      "down": "sweden-question",
+      "edge": {},
+      "backward": "cpi",
+      "forward": "fed"
+    },
+    {
+      "id": "sweden-question",
+      "label": "Party ≠ bloc",
+      "title": "Knowledge floor · Seats do not identify a government",
+      "layer": "detail",
+      "kind": "floor",
+      "parent": "sweden",
+      "body": "The open issue in this branch is the 2026 seat distribution and its coalition implications. The forecast only tests a solo majority. Treating a bloc victory as a single-party majority would mis-score it.",
+      "question": "Which combinations will be arithmetically and politically viable?",
+      "method": "Begin with official results, then add documented party positions. Keep arithmetic feasibility separate from a coalition agreement.",
+      "sources": [
+        "sweden-results",
+        "sweden-history"
+      ],
+      "lon": 112.5,
+      "level": 0,
+      "left": "sweden-evidence",
+      "right": "fed-evidence",
+      "up": "sweden-evidence",
+      "down": null,
+      "edge": {
+        "down": "Evidence boundary: use the open question and continuation prompt to develop this branch."
+      },
+      "backward": "cpi",
+      "forward": "fed"
+    },
+    {
+      "id": "fed",
+      "label": "Fed +¼ point",
+      "title": "The Fed raises its target range by 0.25 points",
+      "layer": "prediction",
+      "date": "2026-09-16",
+      "event": "Federal Reserve decision · September 15–16",
+      "probability": 55,
+      "parent": "inflation",
+      "body": "I give a slight edge to a quarter-point hike. The July committee held rates, but three voters wanted an increase; the August employment report offers another test of whether the economy can absorb restraint. September’s CPI release arrives before the decision and could reverse this lean. This is an explicitly low-confidence policy judgment, not quoted market pricing.",
+      "test": "YES if both bounds of the federal funds target range rise exactly 0.25 percentage points in the scheduled September 16 decision relative to the pre-meeting range. A hold, cut, or differently sized rise is NO.",
+      "alternative": "A hold wins another majority, especially if incoming inflation is soft or the committee emphasizes supply-driven price pressure.",
+      "watch": "September 11 core CPI, the September 16 statement, the vote, and the Summary of Economic Projections.",
+      "sources": [
+        "fed-calendar",
+        "fed-july",
+        "jobs",
+        "cpi-calendar"
+      ],
+      "children": [
+        "fed-evidence",
+        "fed-question"
+      ],
+      "status": "Unresolved at forecast cutoff",
+      "lon": 135.0,
+      "level": 1,
+      "left": "sweden",
+      "right": "boe",
+      "up": "inflation",
+      "down": "fed-evidence",
+      "edge": {},
+      "backward": "sweden",
+      "forward": "boe"
+    },
+    {
+      "id": "fed-evidence",
+      "label": "Three hike votes",
+      "title": "July already contained a competing policy",
+      "layer": "detail",
+      "kind": "evidence",
+      "parent": "fed",
+      "body": "The Fed held its range at 3.50–3.75% in July. Three dissenters preferred a quarter-point increase. That establishes a real alternative inside the committee, but three votes are not a majority and individual positions can change.",
+      "question": "What new evidence might move the majority?",
+      "method": "Compare the September vote and stated rationale with July; use the August employment release and new CPI as inputs, not proof of a decision.",
+      "sources": [
+        "fed-july",
+        "jobs"
+      ],
+      "lon": 135.0,
+      "level": 0,
+      "left": "sweden-question",
+      "right": "fed-question",
+      "up": "fed",
+      "down": "fed-question",
+      "edge": {},
+      "backward": "sweden",
+      "forward": "boe"
+    },
+    {
+      "id": "fed-question",
+      "label": "CPI → Fed",
+      "title": "Knowledge floor · The last data gate",
+      "layer": "detail",
+      "kind": "floor",
+      "parent": "fed",
+      "body": "The CPI release is scheduled five days before the Fed decision. The causal connection is an inference: a hot core reading may strengthen a hike case, while a cool one may weaken it. A single CPI result does not mechanically set monetary policy.",
+      "question": "How much weight will the committee put on the last inflation reading?",
+      "method": "Inspect the statement and press conference; distinguish observed votes from an inferred causal explanation.",
+      "sources": [
+        "cpi-calendar",
+        "fed-calendar"
+      ],
+      "lon": 157.5,
+      "level": 0,
+      "left": "fed-evidence",
+      "right": "boe-evidence",
+      "up": "fed-evidence",
+      "down": null,
+      "edge": {
+        "down": "Evidence boundary: use the open question and continuation prompt to develop this branch."
+      },
+      "backward": "sweden",
+      "forward": "boe"
+    },
+    {
+      "id": "boe",
+      "label": "BoE holds",
+      "title": "The Bank of England keeps Bank Rate at 3.75%",
+      "layer": "prediction",
+      "date": "2026-09-17",
+      "event": "Bank of England decision",
+      "probability": 60,
+      "parent": "patience",
+      "body": "My base case is another hold at 3.75%. July’s majority judged that waiting remained reasonable despite upside risks. I lean toward continuity because an uncertain supply shock can coexist with weak domestic demand. The three July votes for a hike make 4% a serious alternative. This edition has not built a complete August UK data dashboard.",
+      "test": "YES if the September 17 MPC announcement sets Bank Rate at 3.75%. Any different announced rate is NO.",
+      "alternative": "A quarter-point increase to 4% as concern about persistent price pressure outweighs the case for waiting.",
+      "watch": "New UK inflation evidence and the split between members voting to hold and increase.",
+      "sources": [
+        "boe-calendar",
+        "boe-july"
+      ],
+      "children": [
+        "boe-evidence",
+        "boe-question"
+      ],
+      "status": "Unresolved at forecast cutoff",
+      "lon": 180.0,
+      "level": 1,
+      "left": "fed",
+      "right": "boj",
+      "up": "patience",
+      "down": "boe-evidence",
+      "edge": {},
+      "backward": "fed",
+      "forward": "boj"
+    },
+    {
+      "id": "boe-evidence",
+      "label": "A 6–3 hold",
+      "title": "The last majority preferred patience",
+      "layer": "detail",
+      "kind": "evidence",
+      "parent": "boe",
+      "body": "Six MPC members voted to retain 3.75% in July; three wanted 4%. The minutes balanced inflation risks against softer domestic conditions. My hold forecast extends that balance; it does not claim the committee has precommitted.",
+      "question": "Will the prior majority remain intact?",
+      "method": "Use the next published vote and compare the reasons offered by members.",
+      "sources": [
+        "boe-july"
+      ],
+      "lon": 180.0,
+      "level": 0,
+      "left": "fed-question",
+      "right": "boe-question",
+      "up": "boe",
+      "down": "boe-question",
+      "edge": {},
+      "backward": "fed",
+      "forward": "boj"
+    },
+    {
+      "id": "boe-question",
+      "label": "Wages or waiting?",
+      "title": "Knowledge floor · A missing UK update",
+      "layer": "detail",
+      "kind": "floor",
+      "parent": "boe",
+      "body": "The main uncertainty is whether later wages and price evidence will persuade previous hold voters. This initial orb has not verified every intervening UK release, so the prior meeting carries substantial weight.",
+      "question": "Has the evidence for persistent inflation strengthened enough to overturn patience?",
+      "method": "Expand this branch with dated ONS wage, services-price, and labour-market releases before revising the probability.",
+      "sources": [
+        "boe-july"
+      ],
+      "lon": 202.5,
+      "level": 0,
+      "left": "boe-evidence",
+      "right": "boj-evidence",
+      "up": "boe-evidence",
+      "down": null,
+      "edge": {
+        "down": "Evidence boundary: use the open question and continuation prompt to develop this branch."
+      },
+      "backward": "fed",
+      "forward": "boj"
+    },
+    {
+      "id": "boj",
+      "label": "BoJ holds",
+      "title": "The Bank of Japan keeps its rate guideline around 1%",
+      "layer": "prediction",
+      "date": "2026-09-18",
+      "event": "Bank of Japan decision · September 17–18",
+      "probability": 55,
+      "parent": "patience",
+      "body": "I narrowly favor keeping the overnight call-rate guideline around 1%. The July vote was eight to one for that level, with the dissenter proposing 1.25%. That is a starting prior for continuity, not enough for high confidence: this edition has not assembled a full update on Japanese wages, prices, and Board speeches.",
+      "test": "YES if the September 18 policy statement retains an overnight call-rate guideline of around 1.0%. A different guideline is NO; the daily traded market rate is not the scoring measure.",
+      "alternative": "A rise to around 1.25%, bringing the July minority proposal into the majority.",
+      "watch": "The September statement’s guideline and vote; do not wait for minutes that arrive beyond this window.",
+      "sources": [
+        "boj-calendar",
+        "boj-july"
+      ],
+      "children": [
+        "boj-evidence",
+        "boj-question"
+      ],
+      "status": "Unresolved at forecast cutoff",
+      "lon": 225.0,
+      "level": 1,
+      "left": "boe",
+      "right": "games",
+      "up": "patience",
+      "down": "boj-evidence",
+      "edge": {},
+      "backward": "boe",
+      "forward": "games"
+    },
+    {
+      "id": "boj-evidence",
+      "label": "An 8–1 vote",
+      "title": "The July guideline and its challenger",
+      "layer": "detail",
+      "kind": "evidence",
+      "parent": "boj",
+      "body": "The July 31 statement set an overnight call-rate guideline around 1.0% by an eight-to-one vote. The dissenter preferred around 1.25%. This is policy guidance, which must be distinguished from the daily effective market rate.",
+      "question": "How much should a prior supermajority predict the next decision?",
+      "method": "Compare successive statements and votes, then add intervening macro evidence.",
+      "sources": [
+        "boj-july"
+      ],
+      "lon": 225.0,
+      "level": 0,
+      "left": "boe-question",
+      "right": "boj-question",
+      "up": "boj",
+      "down": "boj-question",
+      "edge": {},
+      "backward": "boe",
+      "forward": "games"
+    },
+    {
+      "id": "boj-question",
+      "label": "A new majority?",
+      "title": "Knowledge floor · Continuity is only a prior",
+      "layer": "detail",
+      "kind": "floor",
+      "parent": "boj",
+      "body": "A central bank can change its decision without changing its membership. The missing layer here is an assessment of new inflation and wage evidence since July. The narrow hold lean explicitly reflects that limited update.",
+      "question": "Will enough new evidence shift the Board toward 1.25%?",
+      "method": "Add official Japanese data and dated Board remarks. Judge the forecast against the September statement, not a narrative reconstructed afterward.",
+      "sources": [
+        "boj-july",
+        "boj-calendar"
+      ],
+      "lon": 247.5,
+      "level": 0,
+      "left": "boj-evidence",
+      "right": "games-evidence",
+      "up": "boj-evidence",
+      "down": null,
+      "edge": {
+        "down": "Evidence boundary: use the open question and continuation prompt to develop this branch."
+      },
+      "backward": "boe",
+      "forward": "games"
+    },
+    {
+      "id": "games",
+      "label": "China leads",
+      "title": "China leads the Asian Games gold table by September 22",
+      "layer": "prediction",
+      "date": "2026-09-22",
+      "event": "Asian Games open September 19 · early medal race",
+      "probability": 80,
+      "parent": "momentum",
+      "body": "I expect China to lead the gold-medal table after competition on September 22 in Japan. Its long record makes it the strongest starting choice, but opening-week event order and Japan’s home advantage can disrupt the early table. This prediction deliberately stops inside the two-week window: it does not pretend the October 4 closing results are already in scope.",
+      "test": "YES if China is ranked first by gold medals on the official table at September 22, 23:59 Japan time. Break ties by silver then bronze; an exact tie counts as joint first and YES. If no medals have been awarded or no official tally is recoverable, leave unresolved.",
+      "alternative": "Japan or another delegation leads the early table because the first medal events favor its strengths.",
+      "watch": "The actual medal schedule and official daily gold, silver, and bronze totals.",
+      "sources": [
+        "games-date",
+        "games-history",
+        "games"
+      ],
+      "children": [
+        "games-evidence",
+        "games-question"
+      ],
+      "status": "Unresolved at forecast cutoff",
+      "lon": 270.0,
+      "level": 1,
+      "left": "boj",
+      "right": "un",
+      "up": "momentum",
+      "down": "games-evidence",
+      "edge": {},
+      "backward": "boj",
+      "forward": "un"
+    },
+    {
+      "id": "games-evidence",
+      "label": "Eleven straight",
+      "title": "Historical depth across many sports",
+      "layer": "detail",
+      "kind": "evidence",
+      "parent": "games",
+      "body": "The Olympic Council of Asia reports that China topped the medal table at eleven consecutive Asian Games through Hangzhou, where it won 201 golds. That supports a strong tournament-level prior. It is weaker evidence for the first few days of a different Games.",
+      "question": "How well does a full-Games record transfer to an early table?",
+      "method": "Map the first medal events to recent international results before increasing confidence.",
+      "sources": [
+        "games-history"
+      ],
+      "lon": 270.0,
+      "level": 0,
+      "left": "boj-question",
+      "right": "games-question",
+      "up": "games",
+      "down": "games-question",
+      "edge": {},
+      "backward": "boj",
+      "forward": "un"
+    },
+    {
+      "id": "games-question",
+      "label": "Early-event bias",
+      "title": "Knowledge floor · The order of finals matters",
+      "layer": "detail",
+      "kind": "floor",
+      "parent": "games",
+      "body": "This edition does not include an event-by-event medal simulation. A different early programme could make a normally dominant team trail temporarily. That is the principal uncertainty in moving from historical dominance to a September 22 snapshot.",
+      "question": "Which delegation benefits most from the first medal days?",
+      "method": "Add the official daily final schedule and likely entrants; keep hypothetical medals distinct from completed results.",
+      "sources": [
+        "games",
+        "games-date"
+      ],
+      "lon": 292.5,
+      "level": 0,
+      "left": "games-evidence",
+      "right": "un-evidence",
+      "up": "games-evidence",
+      "down": null,
+      "edge": {
+        "down": "Evidence boundary: use the open question and continuation prompt to develop this branch."
+      },
+      "backward": "boj",
+      "forward": "un"
+    },
+    {
+      "id": "un",
+      "label": "Climate on stage",
+      "title": "Climate appears in at least half of the first ten UN national speeches",
+      "layer": "prediction",
+      "date": "2026-09-22",
+      "event": "UN General Debate · opening day",
+      "probability": 65,
+      "parent": "coalitions",
+      "body": "I expect at least five of the first ten national statements to explicitly discuss climate change, global warming, or climate finance. Climate is embedded in the high-level week programme, but an acute security crisis could dominate the opening debate. This is a forecast about public agenda-setting, not a prediction of an agreement or emissions reduction.",
+      "test": "Review the first ten completed Member State statements in official speaking order on September 22, excluding the Secretary-General and Assembly President. Count explicit climate change, global warming, or climate finance references, including clear equivalents in official translations. YES at five or more. If fewer than ten finish that day, leave unresolved.",
+      "alternative": "Security and economic issues crowd out explicit climate references in six or more of those ten speeches.",
+      "watch": "Official day-one video and transcripts. Keep a ten-row coding record with a supporting passage for each positive count.",
+      "sources": [
+        "un-calendar",
+        "un-day1"
+      ],
+      "children": [
+        "un-evidence",
+        "un-question"
+      ],
+      "status": "Unresolved at forecast cutoff",
+      "lon": 315.0,
+      "level": 1,
+      "left": "games",
+      "right": "ecb",
+      "up": "coalitions",
+      "down": "un-evidence",
+      "edge": {
+        "forward": "End of the September 9–22 forecast thread."
+      },
+      "backward": "games",
+      "forward": null
+    },
+    {
+      "id": "un-evidence",
+      "label": "A scheduled stage",
+      "title": "The debate begins at the horizon’s edge",
+      "layer": "detail",
+      "kind": "evidence",
+      "parent": "un",
+      "body": "The UN programme places the General Debate on September 22–28. Only the opening day falls inside this edition’s window. The programme also lists a climate event on September 23; it is contextual evidence of agenda attention, not an event included in this forecast horizon.",
+      "question": "Will programme prominence translate into national speeches?",
+      "method": "Watch the first ten Member State statements, rather than inferring their content from the programme.",
+      "sources": [
+        "un-calendar",
+        "un-day1"
+      ],
+      "lon": 315.0,
+      "level": 0,
+      "left": "games-question",
+      "right": "un-question",
+      "up": "un",
+      "down": "un-question",
+      "edge": {
+        "forward": "End of the September 9–22 forecast thread."
+      },
+      "backward": "games",
+      "forward": null
+    },
+    {
+      "id": "un-question",
+      "label": "Words vs action",
+      "title": "Knowledge floor · A mention is not a commitment",
+      "layer": "detail",
+      "kind": "floor",
+      "parent": "un",
+      "body": "This forecast uses explicit speech content because it is observable. It says nothing by itself about enforcement, finance delivered, or policy implementation. The remaining uncertainty is both the forthcoming speech content and consistent translation-based coding.",
+      "question": "Can two readers reproduce the same count?",
+      "method": "Record speaker, order, timestamp, exact supporting passage, and official translation. Resolve ambiguous references conservatively; retain the audit trail.",
+      "sources": [
+        "un-day1"
+      ],
+      "lon": 337.5,
+      "level": 0,
+      "left": "un-evidence",
+      "right": "ecb-evidence",
+      "up": "un-evidence",
+      "down": null,
+      "edge": {
+        "down": "Evidence boundary: use the open question and continuation prompt to develop this branch.",
+        "forward": "End of the September 9–22 forecast thread."
+      },
+      "backward": "games",
+      "forward": null
+    }
+  ],
+  "sources": {
+    "fed-calendar": {
+      "title": "Federal Reserve · 2026 meeting calendar",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "published": "2026 calendar",
+      "checked": "2026-09-08"
+    },
+    "fed-july": {
+      "title": "Federal Reserve · July policy decision",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+      "published": "2026-07-29",
+      "checked": "2026-09-08"
+    },
+    "jobs": {
+      "title": "BLS · August employment report",
+      "url": "https://www.bls.gov/news.release/archives/empsit_09042026.htm",
+      "published": "2026-09-04",
+      "checked": "2026-09-08"
+    },
+    "cpi-calendar": {
+      "title": "BLS · September release calendar",
+      "url": "https://www.bls.gov/schedule/2026/09_sched_list.htm",
+      "published": "2026-02-18",
+      "checked": "2026-09-08"
+    },
+    "cpi-july": {
+      "title": "BLS · July consumer prices",
+      "url": "https://www.bls.gov/news.release/archives/cpi_08122026.htm",
+      "published": "2026-08-12",
+      "checked": "2026-09-08"
+    },
+    "ecb-calendar": {
+      "title": "ECB · Monetary policy press conferences",
+      "url": "https://www.ecb.europa.eu/press/press_conference/html/index.en.html",
+      "published": "Calendar checked September 8",
+      "checked": "2026-09-08"
+    },
+    "ecb-july": {
+      "title": "ECB · July policy decision",
+      "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260723~29f24d99bc.en.html",
+      "published": "2026-07-23",
+      "checked": "2026-09-08"
+    },
+    "euro-inflation": {
+      "title": "Eurostat · August inflation flash estimate",
+      "url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-01092026-ap",
+      "published": "2026-09-01",
+      "checked": "2026-09-08"
+    },
+    "boe-calendar": {
+      "title": "Bank of England · MPC dates",
+      "url": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+      "published": "2026 calendar",
+      "checked": "2026-09-08"
+    },
+    "boe-july": {
+      "title": "Bank of England · July decision and minutes",
+      "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/july-2026",
+      "published": "2026-07-30",
+      "checked": "2026-09-08"
+    },
+    "boj-calendar": {
+      "title": "Bank of Japan · Policy meeting calendar",
+      "url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/",
+      "published": "2026 calendar",
+      "checked": "2026-09-08"
+    },
+    "boj-july": {
+      "title": "Bank of Japan · July policy statement (PDF)",
+      "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260731a.pdf",
+      "published": "2026-07-31",
+      "checked": "2026-09-08"
+    },
+    "sweden-date": {
+      "title": "Swedish Election Authority · 2026 election",
+      "url": "https://www.val.se/english",
+      "published": "Calendar checked September 8",
+      "checked": "2026-09-08"
+    },
+    "sweden-history": {
+      "title": "Swedish Election Authority · 2022 results",
+      "url": "https://www.val.se/english/election-results/elections-to-the-riksdag-and-regional-and-municipal-councils/election-results-2022",
+      "published": "2022 results",
+      "checked": "2026-09-08"
+    },
+    "sweden-results": {
+      "title": "Swedish Election Authority · 2026 results portal",
+      "url": "https://resultat.val.se/",
+      "published": "No result available at forecast cutoff",
+      "checked": "2026-09-08"
+    },
+    "games-date": {
+      "title": "Asian Games organizers · Opening ceremony arrangements",
+      "url": "https://www.aichi-nagoya2026.org/ja/news-2045/",
+      "published": "2026-09-07",
+      "checked": "2026-09-08"
+    },
+    "games-history": {
+      "title": "Olympic Council of Asia · Hangzhou results and records",
+      "url": "https://oca.asia/news/4457-oca-acting-director-general-praises-high-quality-hangzhou-asian-games.html",
+      "published": "2023-10-08",
+      "checked": "2026-09-08"
+    },
+    "games": {
+      "title": "Aichi–Nagoya 2026 · Official Games website",
+      "url": "https://www.aichi-nagoya2026.org/",
+      "published": "2026 event website",
+      "checked": "2026-09-08"
+    },
+    "un-calendar": {
+      "title": "United Nations · High-level week 2026",
+      "url": "https://www.un.org/en/high-level-week-2026",
+      "published": "2026 event programme",
+      "checked": "2026-09-08"
+    },
+    "un-day1": {
+      "title": "UN Web TV · General Debate, day one",
+      "url": "https://webtv.un.org/en/asset/k17/k17s3dutob",
+      "published": "Scheduled for 2026-09-22",
+      "checked": "2026-09-08"
+    }
+  }
+}

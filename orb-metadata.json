@@ -1,0 +1,30 @@
+{
+  "id": "crystal-ball-orb",
+  "title": "Crystal Ball ORB",
+  "edition": "2026-09-08-v1",
+  "description": "Eight dated forecasts in a three-layer crystal ball, a 19:24 male-narrated course, and 21 sourced World Watch stories.",
+  "tags": [
+    "CrystalBallOrb",
+    "forecasting",
+    "world events"
+  ],
+  "pointCount": 28,
+  "narrationReady": true,
+  "availableJourneys": [
+    {
+      "id": "crystal-ball-learn-v1",
+      "name": "Thinking in Probabilities",
+      "mode": "ORB Learn",
+      "durationSeconds": 1164.1534999999997,
+      "voice": "Kokoro Michael",
+      "narrationReady": true
+    }
+  ],
+  "worldWatch": {
+    "id": "crystal-ball-world-watch-v1",
+    "asOf": "2026-09-09T02:00:00Z",
+    "stories": 21,
+    "narrated": false
+  },
+  "repository": "https://github.com/visualizationcreation/crystal-ball-orb"
+}
